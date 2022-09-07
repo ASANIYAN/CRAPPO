@@ -28,7 +28,7 @@ const Navbar = () => {
         <nav className="w-full bg-hero text-white">
             <section 
             ref={collapseBarRef} 
-            className="lg:hidden absolute w-[100vw] bg-[rgb(37,37,64)] h-[100vh] left-[50%] translate-x-[50%] z-10 overflow-hidden"
+            className="lg:hidden absolute w-[100%] bg-[rgb(37,37,64)] h-[100vh] left-[50%] translate-x-[50%] z-10 overflow-hidden"
             >
                 <div className="w-full flex justify-end">
                     <i 

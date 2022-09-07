@@ -138,6 +138,57 @@ export default function Home() {
         </section>
       </section>
 
+      <section className="bg-hero">
+        
+        <section className='pb-32'>
+          <h2 className='text-center text-white font-bold text-4xl lg:text-[40px]'>
+            Check how much you can earn
+          </h2>
+          
+          <p className="text-center font-normal text-[#E0E0E0] pt-3 max-w-[500px] mx-auto">
+            Let us check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.
+          </p>
+        
+        </section>
+
+      </section>
+
+      <section className="bg-white">
+        <section
+        className='max-w-[58.875rem] h-[23.188rem] mx-auto rounded-2xl bg-white 
+        drop-shadow-[0_20px_200px_rgba(57,23,119,0.05)] shadow-2xl'
+        > 
+          <section className="bg-[#FBFCFE] pb-12">
+            
+            <form className='flex flex-col md:flex-row justify-between pt-10'>  
+              
+              <div className="md:w-1/2 px-10">
+                <input type="text" placeholder='Enter your hash rate' 
+                className='font-normal text-xl text-hero outline-none bg-[#FBFCFE] placeholder:font-normal placeholder:text-xl 
+                placeholder:text-hero border-b border-b-[#E0E0E0] w-full h-fit pb-1.5 mt-10'
+                />
+              </div>
+              
+              <div className='w-full px-10 md:w-[30%]  md:pl-3 md:pr-10'>
+                <select name="currency" className='w-full bg-[#FBFCFE] border-b border-b-[#E0E0E0] pb-1.5 mt-[49px]' id="currency">
+                  <option value="TH">TH/s</option>
+                  <option value="KH">KH/s</option>
+                  <option value="MH">MH/s</option>
+                  <option value="GH">GH/s</option>
+                </select>
+              </div>
+              
+              <div className="mx-auto">
+                <button className="bg-btnBlue text-white py-4 px-7 font-medium text-lg rounded-[32px] mt-6 mr-14 ">
+                  Calculate
+                </button>
+              </div>
+
+            </form>
+          </section>
+        </section>
+      </section>
+
     </main>
   )
 }
