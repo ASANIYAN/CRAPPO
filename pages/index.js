@@ -2,13 +2,80 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import ArrowRight from "../public/ArrowRight.svg";
+import ArrowRightCoin from "../public/ArrowRight_coin.svg";
 import HeroImg from "../public/hero.svg";
 import IconData from "../public/icon-data.svg";
 import IconEarth from "../public/icon-earth.svg";
 import IconPerson from "../public/icon-person.svg";
 import Why from "../public/Why.svg";
+import Bitcoin from "../public/logo_bitcoin.svg";
+import Ethereum from "../public/Ethereum.svg";
+import Litecoin from "../public/Litecoin.svg";
+import { useState } from 'react';
+
+
+const CoinCard = ({ name, alias, content, image }) => {
+
+  const [hover, setHover] = useState(false);
+
+  return (
+
+      <div 
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className={ hover ? "bg-[#2B076E] rounded-[16px] max-w-[340px] mt-6 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" 
+      : "bg-transparent rounded-[16px] max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" }
+      >
+        
+        <div className="pt-6 mx-auto w-fit">
+          <Image src={image} width={65} height={65} alt="bitcoin" />
+        </div>
+        <div className="flex justify-center">
+        <p
+        className={hover ? "text-white font-bold text-[32px] pt-6" : "text-hero font-bold text-[32px] pt-6" } 
+        > { name } </p>
+        <span 
+        className={hover ? "text-white opacity-70 text-lg pt-9 pl-2" : "text-[#BDBDBD] text-lg pt-9 pl-2"} 
+        > 
+          { alias } 
+        </span> 
+
+        </div>
+        
+        <p 
+        className={hover ? "text-white pt-3 font-normal text-[1rem]  px-2" : "text-[#828282] pt-3 font-normal text-[1rem]  px-2"} 
+        >
+          { content }
+        </p>
+        
+        { hover ?
+          <button
+          className='font-normal sm:font-medium flex justify-center align-middle mx-auto text-lg mt-6 lg:mt-8 
+        bg-[#3671E9] rounded-[32px] sm:rounded-[32px] px-3 py-2 sm:px-6 sm:py-3 text-white'
+          >
+            <span className='pr-4 pt-0.5 sm:pr-5'>
+              Start Mining
+            </span>
+            <Image src={ArrowRight} alt="Arrow-Right" width={32} height={32} />
+          </button>
+          :
+          <div className='w-fit mx-auto mt-6 lg:mt-8'>
+            <Image src={ArrowRightCoin} width={60} height={60} alt="Arrow-Right"/>
+          </div>
+        }
+      </div>
+
+  )
+};
 
 export default function Home() {
+
+  const CoinList = [
+    { name: "Bitcoin", alias: "BTC", content: "Digital currency in which a record of transactions is maintained.", image: Bitcoin},
+    { name: "Ethereum", alias: "ETH", content: "Blockchain technology to create and run decentralized digital applications.", image: Ethereum},
+    { name: "Litecoin", alias: "LTC", content: "Cryptocurrency that enables instant payments to anyone in the world.", image: Litecoin}
+  ];
+
   return (
     <main className="">
       <section className="bg-hero">
@@ -140,12 +207,12 @@ export default function Home() {
 
       <section className="bg-hero">
         
-        <section className='pb-32'>
+        <section className='pb-96 md:pb-72 lg:pb-60'>
           <h2 className='text-center text-white font-bold text-4xl lg:text-[40px]'>
             Check how much you can earn
           </h2>
           
-          <p className="text-center font-normal text-[#E0E0E0] pt-3 max-w-[500px] mx-auto">
+          <p className="text-center font-normal text-[#E0E0E0] pt-3 max-w-[500px] mx-auto px-3 sm:px-2 md:px-0">
             Let us check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.
           </p>
         
@@ -153,12 +220,12 @@ export default function Home() {
 
       </section>
 
-      <section className="bg-white">
+      <section className="bg-white px-4 lg:px-0">
         <section
-        className='max-w-[58.875rem] h-[23.188rem] mx-auto rounded-2xl bg-white 
-        drop-shadow-[0_20px_200px_rgba(57,23,119,0.05)] shadow-2xl'
+        className='max-w-[58.875rem] pb-16 mx-auto rounded-2xl bg-white 
+        drop-shadow-[0_20px_200px_rgba(57,23,119,0.05)] shadow-2xl -translate-y-[45%]'
         > 
-          <section className="bg-[#FBFCFE] pb-12">
+          <section className="bg-[#FBFCFE] pb-12 rounded-t-2xl">
             
             <form className='flex flex-col md:flex-row justify-between pt-10'>  
               
@@ -186,7 +253,41 @@ export default function Home() {
 
             </form>
           </section>
+
+          <section className="pl-10 mt-16">
+            
+            <p className="text-[1rem] text-[#3671E9] font-medium">
+              ESTIMATED 24 HOUR REVENUE:
+            </p>
+
+            <p className="text-hero font-bold text-[2rem] pt-3 ">
+              0.055 130 59 ETH 
+              <span className='text-[#3671E9] pl-1.5'>
+              &#40;$1275&#41;
+              </span>
+            </p>
+            <small className="text-[#828282] text-[1rem] pr-4 sm:pr-0">
+              Revenue will change based on mining difficulty and Ethereum price.
+            </small>
+
+          </section>
+
         </section>
+      </section>
+
+      <section className="-mt-36 md:-mt-16 lg:-mt-10 bg-white">
+        
+        <h2 className='text-[#0D0D2B] font-bold text-3xl md:text-5xl lg:text-[2.5rem] text-center mx-auto max-w-[750px]'>
+          Trade securely and market the high growth cryptocurrencies.
+        </h2>
+
+        <section  className='mx-3 lg:ml-16 xl:ml-24 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
+        { CoinList.map((coin, index) => (
+          <CoinCard key={index} name={coin.name} alias={coin.alias} content={coin.content} image={coin.image} />
+          ))}
+        </section>
+
+
       </section>
 
     </main>
