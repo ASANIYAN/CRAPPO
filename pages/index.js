@@ -13,6 +13,7 @@ import Ethereum from "../public/Ethereum.svg";
 import Litecoin from "../public/Litecoin.svg";
 import Chart from "../public/Chart.svg";
 import Statistic from "../public/Statistic.svg";
+import Table from "../public/Table.svg";
 import { useState } from 'react';
 
 
@@ -348,6 +349,35 @@ export default function Home() {
                 Learn More
               </button>
 
+          </section>
+
+        </section>
+
+        
+        <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16'>
+
+          <section className="lg:mt-24">
+            
+            <h3 className='text-white font-bold text-2xl text-center sm:text-left sm:text-[2rem]'>
+              Grow your profit and track your investments
+            </h3>
+            <p className="text-[#E0E0E0] font-normal pt-4 sm:pr-20 lg:pr-0 lg:max-w-[400px] text-center sm:text-left" 
+            >
+              Use advanced analytical tools. Clear TradingView charts let you track current and historical profit investments.
+            </p>
+            <button
+              className='font-medium sm:font-medium flex justify-center align-middle text-white text-lg mt-6 lg:mt-8 
+              bg-[#3671E9] rounded-[32px] sm:rounded-[32px] px-4 py-2 sm:px-5 sm:py-3 mx-auto sm:mx-0'
+              >
+                Learn More
+              </button>
+
+          </section>
+
+          <section>
+              <div className="">
+                <Image src={Table} width={500} height={500} />
+              </div>
           </section>
 
         </section>  
