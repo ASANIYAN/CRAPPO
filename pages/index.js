@@ -12,6 +12,7 @@ import Bitcoin from "../public/logo_bitcoin.svg";
 import Ethereum from "../public/Ethereum.svg";
 import Litecoin from "../public/Litecoin.svg";
 import Chart from "../public/Chart.svg";
+import Statistic from "../public/Statistic.svg";
 import { useState } from 'react';
 
 
@@ -318,13 +319,41 @@ export default function Home() {
 
           <section>
               <div>
-                <Image src={Chart} width={550} height={550} />
+                <Image src={Chart} width={500} height={500} />
               </div>
           </section>
 
-        </section>   
+        </section> 
+
+        <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-0 mt-10'>
+
+          <section className='order-last lg:order-first'>
+            <div>
+              <Image src={Statistic} width={600} height={600} />
+            </div>
+          </section>
+
+          <section className="lg:mt-24">
+            
+            <h3 className='text-white font-bold text-2xl text-center sm:text-left sm:text-[2rem]'>
+              Detailed Statistics
+            </h3>
+            <p className="text-[#E0E0E0] font-normal pt-4 sm:pr-20 lg:pr-0 lg:max-w-[400px] text-center sm:text-left" >
+              View all mining related information in realtime, at any point at any location and decide which polls you want to mine in.
+              </p>
+            <button
+              className='font-medium sm:font-medium flex justify-center align-middle text-white text-lg mt-6 lg:mt-8 
+              bg-[#3671E9] rounded-[32px] sm:rounded-[32px] px-4 py-2 sm:px-5 sm:py-3 mx-auto sm:mx-0'
+              >
+                Learn More
+              </button>
+
+          </section>
+
+        </section>  
 
       </section>
+
 
     </main>
   )
