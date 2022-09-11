@@ -11,6 +11,7 @@ import Why from "../public/Why.svg";
 import Bitcoin from "../public/logo_bitcoin.svg";
 import Ethereum from "../public/Ethereum.svg";
 import Litecoin from "../public/Litecoin.svg";
+import Chart from "../public/Chart.svg";
 import { useState } from 'react';
 
 
@@ -23,8 +24,8 @@ const CoinCard = ({ name, alias, content, image }) => {
       <div 
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className={ hover ? "bg-[#2B076E] rounded-[16px] max-w-[340px] mt-6 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" 
-      : "bg-transparent rounded-[16px] max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" }
+      className={ hover ? "bg-[#2B076E] rounded-[16px] max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" 
+      : "bg-transparent max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" }
       >
         
         <div className="pt-6 mx-auto w-fit">
@@ -275,9 +276,9 @@ export default function Home() {
         </section>
       </section>
 
-      <section className="-mt-36 md:-mt-16 lg:-mt-10 bg-white">
+      <section className="-mt-36 mb-10 md:-mt-16 lg:-mt-10 bg-white">
         
-        <h2 className='text-[#0D0D2B] font-bold text-3xl md:text-5xl lg:text-[2.5rem] text-center mx-auto max-w-[750px]'>
+        <h2 className='text-[#0D0D2B] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-center mx-auto max-w-[750px]'>
           Trade securely and market the high growth cryptocurrencies.
         </h2>
 
@@ -287,6 +288,41 @@ export default function Home() {
           ))}
         </section>
 
+
+      </section>
+
+      <section className="bg-[#2B076E] mt-4 ">
+
+        <h2 
+        className='text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-center mx-auto max-w-[750px] pt-10'
+        >
+          Market sentiments, portfolio, and run the infrastructure of your choice 
+        </h2>
+
+        <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16'>
+
+          <section className="lg:mt-24">
+            
+            <h3 className='text-white font-bold text-2xl text-center sm:text-left sm:text-[2rem]'>
+              Invest Smart
+            </h3>
+            <p className="text-[#E0E0E0] font-normal pt-4 sm:pr-20 lg:pr-0 lg:max-w-[400px] text-center sm:text-left" >Get full statistic information about the behaviour of buyers and sellers will help you to make the decision.</p>
+            <button
+              className='font-medium sm:font-medium flex justify-center align-middle text-white text-lg mt-6 lg:mt-8 
+              bg-[#3671E9] rounded-[32px] sm:rounded-[32px] px-4 py-2 sm:px-5 sm:py-3 mx-auto sm:mx-0'
+              >
+                Learn More
+              </button>
+
+          </section>
+
+          <section>
+              <div>
+                <Image src={Chart} width={550} height={550} />
+              </div>
+          </section>
+
+        </section>   
 
       </section>
 
