@@ -361,7 +361,7 @@ export default function Home() {
             <h3 className='text-white font-bold text-2xl text-center sm:text-left sm:text-[2rem]'>
               Grow your profit and track your investments
             </h3>
-            <p className="text-[#E0E0E0] font-normal pt-4 sm:pr-20 lg:pr-0 lg:max-w-[400px] text-center sm:text-left" 
+            <p className="text-[#E0E0E0] text-[1rem] font-normal pt-4 sm:pr-20 lg:pr-0 lg:max-w-[400px] text-center sm:text-left" 
             >
               Use advanced analytical tools. Clear TradingView charts let you track current and historical profit investments.
             </p>
@@ -382,6 +382,42 @@ export default function Home() {
 
         </section>  
 
+      </section>
+
+      <section className="bg-hero py-10 px-6 lg:px-16">
+        <div className='flex flex-col lg:flex-row justify-between bg-[#3671E9] rounded-[16px] mx-auto text-white py-10 px-8'>
+          
+          <div>
+            <h3 className="font-bold text-2xl text-center lg:text-left sm:text-[2rem]" > Start mining now </h3>
+            <p className="font-normal text-[1rem] text-center lg:text-left lg:max-w-[400px] mx-auto lg:mx-0 pt-2.5" 
+            > 
+              Join now with CRAPPO to get the latest news and start mining now
+            </p>
+          </div>
+
+          <div className='lg:w-1/2'>
+            <form className='flex flex-col lg:flex-row'>
+
+              <div className='w-full'>
+                <input type="text" placeholder='Enter your email' 
+                className='border-b bg-transparent w-full text-white pb-1.5 outline-none placeholder:font-normal  
+                placeholder:text-[1rem] placeholder:text-white font-normal text-[1rem] placeholder:text-left 
+                sm:placeholder:text-center lg:placeholder:text-left mt-6 md:mt-8'
+                style={{borderBottom: "1px solid rgba(255, 255, 255, 0.4)"}}
+                />
+              </div>
+
+              <div className="w-fit mx-auto lg:ml-12">
+                <button className="bg-white text-hero py-4 px-7 font-medium text-lg rounded-[32px] mt-6 lg:mr-14 ">
+                  Subscribe
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+
+        </div>
       </section>
 
 
