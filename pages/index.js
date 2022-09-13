@@ -384,7 +384,7 @@ export default function Home() {
 
       </section>
 
-      <section className="bg-hero py-10 px-6 lg:px-16">
+      <section className="bg-hero py-10 px-6 lg:px-16 xl:pl-24 xl:pr-16">
         <div className='flex flex-col lg:flex-row justify-between bg-[#3671E9] rounded-[16px] mx-auto text-white py-10 px-8'>
           
           <div>
@@ -419,7 +419,6 @@ export default function Home() {
 
         </div>
       </section>
-
 
     </main>
   )
