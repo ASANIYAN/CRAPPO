@@ -18,7 +18,7 @@ const Footer = () => {
             <section className="grid grid-cols-1 lg:grid-cols-4 gap-1 lg:pr-4">
 
                 <Link href={'/'}>
-                    <a className="flex mx-auto xl:pl-24 xl:pr-16  text-white">
+                    <a className="flex mx-auto lg:mx-0 xl:pl-24 xl:pr-16  text-white">
                         <div className="h-fit">
                             <Image src={Logo} width={40} height={40} />
                         </div>
