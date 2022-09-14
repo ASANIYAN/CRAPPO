@@ -20,7 +20,7 @@ const Footer = () => {
                 <Link href={'/'}>
                     <a className="flex mx-auto lg:mx-0 xl:pl-24 xl:pr-16  text-white h-fit">
                         <div className="h-fit">
-                            <Image src={Logo} width={40} height={40} />
+                            <Image src={Logo} width={40} height={40} alt="logo" />
                         </div>
                         <p className="text-[18px] ml-4 pt-2"> CRAPPO </p>
                     </a>
@@ -52,13 +52,13 @@ const Footer = () => {
                     <h4 className="text-white font-medium text-xl sm:text-2xl lg:text-2xl xl:text-3xl" > We accept following payment systems </h4>
                     <div className="mt-4 flex justify-center lg:justify-start">
                         <div className="w-fit">
-                            <Image src={Visa} width={60} height={40} />
+                            <Image src={Visa} width={60} height={40} alt="visa" />
                         </div>
                         <div className="w-fit ml-3">
-                            <Image src={MasterCard} width={60} height={40} />
+                            <Image src={MasterCard} width={60} height={40} alt="mastercard" />
                         </div>
                         <div className="w-fit ml-3">
-                            <Image src={Bitcoin} width={60} height={40} />
+                            <Image src={Bitcoin} width={60} height={40} alt="bitcoin" />
                         </div>
                     </div>
                 </section>

@@ -83,7 +83,7 @@ const CoinCard = ({ name, alias, content, image }) => {
           </button>
           :
           <div className='w-fit mx-auto mt-6 lg:mt-8'>
-            <Image src={ArrowRightCoin} width={60} height={60} alt="Arrow-Right"/>
+            <Image src={ArrowRightCoin} width={60} height={60} alt="Arrow-Right-coin"/>
           </div>
         }
       </div>
@@ -334,7 +334,7 @@ export default function Home() {
 
           <section ref={heroRight} className='mt-6 lg:-mt-16 sm:mr-10  md:mr-16 lg:mr-10 xl:mr-20 translate-x-[9999px]'>
             <div className="">
-              <Image src={HeroImg} width={800} height={800} />
+              <Image src={HeroImg} width={800} height={800} alt="hero" />
             </div>
           </section>
 
@@ -348,7 +348,7 @@ export default function Home() {
 
           <section className="flex mx-auto lg:mx-0">
             <div>
-              <Image src={IconData} width={70} height={70} />
+              <Image src={IconData} width={70} height={70}  alt="icon-data"/>
             </div>
             
             <div className="ml-5 pt-1 sm:pt-3 lg:pt-3">
@@ -363,7 +363,7 @@ export default function Home() {
 
           <section className="flex mt-4 md:mt-8 lg:mt-0 mx-auto lg:mx-0">
             <div className='-ml-6 lg:ml-0'>
-              <Image src={IconPerson} width={70} height={70} />
+              <Image src={IconPerson} width={70} height={70} alt="icon-person" />
             </div>
             
             <div className="ml-5 pt-1 sm:pt-3 lg:pt-3">
@@ -378,7 +378,7 @@ export default function Home() {
 
           <section className="flex mt-4 md:mt-8 lg:mt-0 mx-auto lg:mx-0">
             <div className='-ml-10 lg:ml-0'>
-              <Image src={IconEarth} width={70} height={70} />
+              <Image src={IconEarth} width={70} height={70} alt="icon-earth" />
             </div>
             
             <div className="ml-5 pt-1 sm:pt-3 lg:pt-3">
@@ -400,7 +400,7 @@ export default function Home() {
         <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 pt-6 lg:pt-10 ml-3 sm:ml-32 lg:ml-16 xl:ml-24'>
           
           <div ref={whyLeft} className='mt-6 sm:mr-10 md:mr-16 lg:mr-0 sm:-mt-28 lg:mt-0 order-last lg:order-first first translate-x-[9999px]'>
-            <Image src={Why} width={700} height={700} />
+            <Image src={Why} width={700} height={700} alt="why" />
           </div>
 
           <section ref={whyRight} className="pt-20 lg:text-left lg:pt-44 lg:mr-2 xl:mr-16 -translate-x-[9999px]">
@@ -539,7 +539,7 @@ export default function Home() {
 
           <section>
               <div ref={bitcoinChart} className="translate-x-[9999px]">
-                <Image src={Chart} width={500} height={500} />
+                <Image src={Chart} width={500} height={500} alt="bitcoin-chart" />
               </div>
           </section>
 
@@ -549,7 +549,7 @@ export default function Home() {
 
           <section className='order-last lg:order-first'>
             <div>
-              <Image src={Statistic} width={600} height={600} />
+              <Image src={Statistic} width={600} height={600} alt="statistics-chart" />
             </div>
           </section>
 
@@ -595,7 +595,7 @@ export default function Home() {
 
           <section>
               <div className="">
-                <Image src={Table} width={500} height={500} />
+                <Image src={Table} width={500} height={500} alt="chart" />
               </div>
           </section>
 
