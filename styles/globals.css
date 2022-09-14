@@ -16,24 +16,17 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-}
-
-@media screen and (max-width: 1023px){
-
-    body {
-        overflow-x: hidden !important;
-    }
-
-    .fa-bars {
-        display: none !important;
-    }
-
+    overflow-x: hidden !important;
 }
 
 @media screen and (min-width: 1024px){
     .mobile {
         visibility: hidden !important;
         display: none;
+    }
+
+    .fa-bars {
+        display: none !important;
     }
 
 }
