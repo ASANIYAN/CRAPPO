@@ -50,7 +50,7 @@ const Navbar = () => {
         gsap.to(collapseBarRef.current, {
             duration: 2,
             ease: "power4",
-            x: '9999px',
+            x: '-100vw',
 
         })
     }
@@ -59,7 +59,7 @@ const Navbar = () => {
         <nav className="w-full bg-hero text-white overflow-x-hidden">
             <section 
             ref={collapseBarRef} 
-            className="lg:hidden absolute w-[100%] bg-[rgb(37,37,64)]  h-[100vh] z-10 translate-x-[9999px]"
+            className="lg:hidden absolute w-[100%] bg-[rgb(37,37,64)]  h-full z-10 translate-x-[-100vw] overflow-y-hidden"
             >
                 <div className="w-full flex justify-end">
                     <i
