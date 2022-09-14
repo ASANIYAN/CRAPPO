@@ -59,7 +59,7 @@ const Navbar = () => {
         <nav className="w-full bg-hero text-white">
             <section 
             ref={collapseBarRef} 
-            className="lg:hidden fixed w-[100%] bg-[rgb(37,37,64)] mobile h-[100vh] z-10 translate-x-[9999px]"
+            className="lg:hidden fixed w-[100%] bg-[rgb(37,37,64)]  h-[100vh] z-10 translate-x-[9999px]"
             >
                 <div className="w-full flex justify-end">
                     <i
@@ -100,7 +100,7 @@ const Navbar = () => {
 
                 
                 <i 
-                className="fa-solid fa-bars text-2xl cursor-pointer mr-3 mt-2 lg:hidden"
+                className="fa-solid fa-bars text-2xl cursor-pointer mr-3 mt-2 mobile lg:none"
                 onClick={openCollapseBar}
                 ></i>
 

@@ -24,6 +24,10 @@ body {
         overflow-x: hidden !important;
     }
 
+    .fa-bars {
+        display: none !important;
+    }
+
 }
 
 @media screen and (min-width: 1024px){
