@@ -92,7 +92,7 @@ const Navbar = () => {
                 
                 <Link href={'/'}>
                     <a className="flex ml-3 lg:ml-16 xl:ml-24">
-                        <Image src={Logo} width={40} height={40} />
+                        <Image src={Logo} width={40} height={40} alt="logo" />
                         <p className="text-[18px] ml-4 pt-2"> CRAPPO </p>
                     </a>
                 </Link>

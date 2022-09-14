@@ -1,19 +1,18 @@
-import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import ArrowRight from "../public/ArrowRight.svg";
-import ArrowRightCoin from "../public/ArrowRight_coin.svg";
-import HeroImg from "../public/hero.svg";
-import IconData from "../public/icon-data.svg";
-import IconEarth from "../public/icon-earth.svg";
-import IconPerson from "../public/icon-person.svg";
-import Why from "../public/Why.svg";
-import Bitcoin from "../public/logo_bitcoin.svg";
-import Ethereum from "../public/Ethereum.svg";
-import Litecoin from "../public/Litecoin.svg";
-import Chart from "../public/Chart.svg";
-import Statistic from "../public/Statistic.svg";
-import Table from "../public/Table.svg";
+import styles from '/styles/Home.module.css';
+import ArrowRight from "/public/ArrowRight.svg";
+import ArrowRightCoin from "/public/ArrowRight_coin.svg";
+import HeroImg from "/public/hero.svg";
+import IconData from "/public/icon-data.svg";
+import IconEarth from "/public/icon-earth.svg";
+import IconPerson from "/public/icon-person.svg";
+import Why from "/public/Why.svg";
+import Bitcoin from "/public/logo_bitcoin.svg";
+import Ethereum from "/public/Ethereum.svg";
+import Litecoin from "/public/Litecoin.svg";
+import Chart from "/public/Chart.svg";
+import Statistic from "/public/Statistic.svg";
+import Table from "/public/Table.svg";
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -180,6 +179,7 @@ export default function Home() {
       delay:1,
       scrollTrigger: {
         trigger: whyLeft.current,
+        start: 'top center+=100',
       }
     });
 
@@ -190,6 +190,7 @@ export default function Home() {
       delay:1,
       scrollTrigger: {
         trigger: whyRight.current,
+        start: 'top center+=100',
       }
     });
   }, []);
