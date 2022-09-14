@@ -56,10 +56,10 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="w-full bg-hero text-white">
+        <nav className="w-full bg-hero text-white overflow-x-hidden">
             <section 
             ref={collapseBarRef} 
-            className="lg:hidden fixed w-[100%] bg-[rgb(37,37,64)]  h-[100vh] z-10 translate-x-[9999px]"
+            className="lg:hidden absolute w-[100%] bg-[rgb(37,37,64)]  h-[100vh] z-10 translate-x-[9999px]"
             >
                 <div className="w-full flex justify-end">
                     <i

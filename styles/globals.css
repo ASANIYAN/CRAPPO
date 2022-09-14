@@ -6,8 +6,7 @@
 
 * {
     scrollbar-color: gray #0D0D2B;
-    scrollbar-width: thin;
-    
+    scrollbar-width: thin; 
 }
 
 .scroller::-webkit-scrollbar-thumb:vertical:hover {
@@ -15,8 +14,9 @@
 }
 
 body {
+    width: 100vw;
     font-family: 'Rubik', sans-serif;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 1024px){
