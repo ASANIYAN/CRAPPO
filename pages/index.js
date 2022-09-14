@@ -14,20 +14,40 @@ import Litecoin from "../public/Litecoin.svg";
 import Chart from "../public/Chart.svg";
 import Statistic from "../public/Statistic.svg";
 import Table from "../public/Table.svg";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
 
 
 const CoinCard = ({ name, alias, content, image }) => {
 
   const [hover, setHover] = useState(false);
 
+  
+  const list = useRef(null);
+  
+  useEffect(() => {
+    gsap.to(list.current, { 
+      x: '0', 
+      ease: 'power3', 
+      duration: 1, 
+      delay:1,
+      scrollTrigger: {
+        trigger: list.current,
+      }
+    });
+  }, []);
+
+
   return (
 
       <div 
+      ref={list}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className={ hover ? "bg-[#2B076E] rounded-[16px] max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" 
-      : "bg-transparent max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" }
+      : "bg-transparent max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto translate-x-[9999px]" }
       >
         
         <div className="pt-6 mx-auto w-fit">
@@ -71,7 +91,10 @@ const CoinCard = ({ name, alias, content, image }) => {
   )
 };
 
+
 export default function Home() {
+  
+  gsap.registerPlugin(ScrollTrigger);
 
   const CoinList = [
     { name: "Bitcoin", alias: "BTC", content: "Digital currency in which a record of transactions is maintained.", image: Bitcoin},
@@ -79,14 +102,205 @@ export default function Home() {
     { name: "Litecoin", alias: "LTC", content: "Cryptocurrency that enables instant payments to anyone in the world.", image: Litecoin}
   ];
 
+
+  const heroLeft = useRef(null);
+  const heroRight = useRef(null);
+  const figuresRef = useRef(null);
+  const whyLeft = useRef(null);
+  const whyRight = useRef(null);
+  const earn = useRef(null);
+  const rate = useRef(null);
+  const trade = useRef(null);
+  const market = useRef(null);
+  const invest = useRef(null);
+  const bitcoinChart = useRef(null);
+  const statistics = useRef(null);
+  const grow = useRef(null);
+  const mining = useRef(null);
+  
+
+  useEffect(() => {
+    
+    gsap.to(heroLeft.current, { 
+      x: '0', 
+      ease: 'circ', 
+      duration:2, 
+      delay:1,
+      scrollTrigger: {
+        trigger: heroLeft.current,
+      }
+    })
+
+    gsap.to(heroRight.current, { 
+      x: '0', 
+      ease: 'circ', 
+      duration:2, 
+      delay:1,
+      scrollTrigger: {
+        trigger: heroRight.current,
+      }
+    })
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(figuresRef.current, {
+      opacity: 0,
+      scale: 0,
+    }, {
+      duration: 2,
+      opacity: 1,
+      scale: 1,
+      scrollTrigger: figuresRef.current,
+    },)
+  })
+
+  useEffect(() => {
+    gsap.fromTo(rate.current, {
+      opacity: 0,
+      scale: 0,
+    }, {
+      duration: 2,
+      opacity: 1,
+      scale: 1,
+      scrollTrigger: rate.current,
+      start: 'top center+=100',
+    },)
+  })
+
+  useEffect(() => {
+
+  }, [])
+
+  useEffect(() => {
+
+    gsap.to(whyLeft.current, { 
+      x: '0', 
+      ease: 'power4', 
+      duration: 2, 
+      delay:1,
+      scrollTrigger: {
+        trigger: whyLeft.current,
+      }
+    });
+
+    gsap.to(whyRight.current, { 
+      x: '0', 
+      ease: 'power4', 
+      duration: 2, 
+      delay:1,
+      scrollTrigger: {
+        trigger: whyRight.current,
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(earn.current, {
+      opacity: 0,
+      scale: 0,
+    }, {
+      duration: 2,
+      opacity: 1,
+      scale: 1,
+      scrollTrigger: {
+        trigger: earn.current,
+      } 
+    },)
+  }, []);
+
+  useEffect(() => {
+    gsap.to(trade.current, { 
+      x: '0', 
+      ease: 'power3', 
+      duration: 1.5, 
+      delay:1,
+      scrollTrigger: {
+        trigger: trade.current,
+      }
+    });
+  }, []);
+
+
+  useEffect(() => {
+    gsap.fromTo(market.current, {
+      opacity: 0,
+      scale: 0,
+    }, {
+      duration: 2,
+      opacity: 1,
+      scale: 1,
+      scrollTrigger: market.current,
+    },)
+  })
+
+  useEffect(() => {
+    gsap.fromTo(invest.current, {
+      opacity: 0,
+      scale: 0,
+    }, {
+      duration: 2,
+      opacity: 1,
+      scale: 1,
+      scrollTrigger: invest.current,
+    })
+  }, [])
+
+  useEffect(() => {
+    gsap.to(bitcoinChart.current, { 
+      x: '0', 
+      ease: 'power2', 
+      duration:1, 
+      delay:1,
+      scrollTrigger: {
+        trigger: bitcoinChart.current,
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    gsap.to(statistics.current, { 
+      x: '0', 
+      ease: 'power4', 
+      duration:2, 
+      delay:1,
+      scrollTrigger: {
+        trigger: statistics.current,
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    gsap.to(grow.current, { 
+      x: '0', 
+      ease: 'power4', 
+      duration:2, 
+      delay:1,
+      scrollTrigger: {
+        trigger: grow.current,
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    gsap.fromTo(mining.current, {
+      opacity: 0,
+      scale: 0,
+    }, {
+      duration: 2,
+      opacity: 1,
+      scale: 1,
+      scrollTrigger: mining.current,
+    },)
+  })
+
   return (
     <main className="">
-      <section className="bg-hero">
+      <section className={` ${styles.hero}`}>
         
         <section 
         className=' text-white pt-6 lg:pt-10 ml-3 sm:ml-32 lg:ml-16 xl:ml-24 lg:grid lg:grid-cols-2 lg:gap-4'
         >
-          <section className=''>
+          <section ref={heroLeft} className='-translate-x-[9999px]'>
             
             <section 
             className={`${styles.save} w-[19.75rem] sm:w-[22.6rem] rounded-[32px]`}
@@ -118,9 +332,9 @@ export default function Home() {
 
           </section>
 
-          <section className='mt-6 lg:-mt-16 sm:mr-10  md:mr-16 lg:mr-10 xl:mr-20'>
+          <section ref={heroRight} className='mt-6 lg:-mt-16 sm:mr-10  md:mr-16 lg:mr-10 xl:mr-20 translate-x-[9999px]'>
             <div className="">
-              <Image src={HeroImg} width={700} height={700} />
+              <Image src={HeroImg} width={800} height={800} />
             </div>
           </section>
 
@@ -130,7 +344,7 @@ export default function Home() {
 
       <section className='bg-hero pl-3 sm:pl-32 lg:pl-16 xl:pl-24'>
 
-        <section className='text-white grid grid-cols-1 pt-24 lg:grid-cols-3 lg:gap-20 w-fit mx-auto lg:w-full'>
+        <section ref={figuresRef} className='text-white grid grid-cols-1 pt-24 lg:grid-cols-3 lg:gap-20 w-fit mx-auto lg:w-full'>
 
           <section className="flex mx-auto lg:mx-0">
             <div>
@@ -185,11 +399,11 @@ export default function Home() {
         
         <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 pt-6 lg:pt-10 ml-3 sm:ml-32 lg:ml-16 xl:ml-24'>
           
-          <div className='mt-6 sm:mr-10 md:mr-16 lg:mr-0 sm:-mt-28 lg:mt-0 order-last lg:order-first'>
+          <div ref={whyLeft} className='mt-6 sm:mr-10 md:mr-16 lg:mr-0 sm:-mt-28 lg:mt-0 order-last lg:order-first first translate-x-[9999px]'>
             <Image src={Why} width={700} height={700} />
           </div>
 
-          <section className="pt-20 lg:text-left lg:pt-44 lg:mr-2 xl:mr-16">
+          <section ref={whyRight} className="pt-20 lg:text-left lg:pt-44 lg:mr-2 xl:mr-16 -translate-x-[9999px]">
             
             <h2 className="font-bold text-4xl lg:text-[40px]">
               Why you should choose CRAPPO
@@ -210,7 +424,7 @@ export default function Home() {
 
       <section className="bg-hero">
         
-        <section className='pb-96 md:pb-72 lg:pb-60'>
+        <section ref={earn} className='pb-96 md:pb-72 lg:pb-60'>
           <h2 className='text-center text-white font-bold text-4xl lg:text-[40px]'>
             Check how much you can earn
           </h2>
@@ -225,6 +439,7 @@ export default function Home() {
 
       <section className="bg-white px-4 lg:px-0">
         <section
+        ref={rate}
         className='max-w-[58.875rem] pb-16 mx-auto rounded-2xl bg-white 
         drop-shadow-[0_20px_200px_rgba(57,23,119,0.05)] shadow-2xl -translate-y-[45%]'
         > 
@@ -280,11 +495,14 @@ export default function Home() {
 
       <section className="-mt-36 mb-10 md:-mt-16 lg:-mt-10 bg-white">
         
-        <h2 className='text-[#0D0D2B] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-center mx-auto max-w-[750px]'>
+        <h2 ref={trade} 
+        className='text-[#0D0D2B] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-center mx-auto 
+        max-w-[750px] -translate-x-[9999px]'>
           Trade securely and market the high growth cryptocurrencies.
         </h2>
 
-        <section  className='mx-3 lg:ml-16 xl:ml-24 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
+        <section  
+        className='mx-3 lg:ml-16 xl:ml-24 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         { CoinList.map((coin, index) => (
           <CoinCard key={index} name={coin.name} alias={coin.alias} content={coin.content} image={coin.image} />
           ))}
@@ -296,6 +514,7 @@ export default function Home() {
       <section className="bg-[#2B076E] mt-4 ">
 
         <h2 
+        ref={market}
         className='text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-center mx-auto max-w-[750px] pt-10'
         >
           Market sentiments, portfolio, and run the infrastructure of your choice 
@@ -303,7 +522,7 @@ export default function Home() {
 
         <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16'>
 
-          <section className="lg:mt-24">
+          <section ref={invest} className="lg:mt-24">
             
             <h3 className='text-white font-bold text-2xl text-center sm:text-left sm:text-[2rem]'>
               Invest Smart
@@ -319,14 +538,14 @@ export default function Home() {
           </section>
 
           <section>
-              <div>
+              <div ref={bitcoinChart} className="translate-x-[9999px]">
                 <Image src={Chart} width={500} height={500} />
               </div>
           </section>
 
         </section> 
 
-        <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-0 mt-10'>
+        <section ref={statistics} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-0 mt-10 translate-x-[9999px]'>
 
           <section className='order-last lg:order-first'>
             <div>
@@ -354,7 +573,7 @@ export default function Home() {
         </section>
 
         
-        <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16'>
+        <section ref={grow} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16 -translate-x-[9999px]'>
 
           <section className="lg:mt-24">
             
@@ -384,8 +603,8 @@ export default function Home() {
 
       </section>
 
-      <section className="bg-hero py-10 px-6 lg:px-16 xl:pl-24 xl:pr-16">
-        <div className='flex flex-col lg:flex-row justify-between bg-[#3671E9] rounded-[16px] mx-auto text-white py-10 px-8'>
+      <section className={`${styles.newsletter} py-10 px-6 lg:px-16 xl:pl-24 xl:pr-16`}>
+        <div ref={mining} className={`${styles.newsletterBox} flex flex-col lg:flex-row justify-between  rounded-[16px] mx-auto text-white py-10 px-8`} >
           
           <div>
             <h3 className="font-bold text-2xl text-center lg:text-left sm:text-[2rem]" > Start mining now </h3>

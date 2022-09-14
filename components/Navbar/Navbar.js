@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,12 +7,42 @@ import Logo from "./assets/Logo.svg";
 const Navbar = () => {
 
     const collapseBarRef = useRef(null);
+    const NavRef = useRef(null);
+    const NavMobileRef = useRef(null);
+    const barRef = useRef(null);
+
+    // useEffect(() => {
+    //     gsap.to()
+    // },)
+
+    useEffect(() => {
+        gsap.to(NavRef.current, {
+            duration: 2,
+            autoAlpha: 1,
+            ease: 'none',
+            delay: 1,
+        }, );
+        gsap.to(barRef.current, {
+            duration: 2,
+            autoAlpha: 1,
+            ease: 'none',
+            delay: 1,
+        })
+    }, []);
 
     function openCollapseBar() {
-        gsap.to(collapseBarRef.current, {
+        const nav_mobile_tl = gsap.timeline({defaults: {duration:1}})  
+        nav_mobile_tl
+        .to(collapseBarRef.current, {
             duration: 1,
-            ease: "bounce",
+            ease: "power1",
             x: '-50%',
+        })
+        .to(NavMobileRef.current, {
+            // duration: 2,
+            autoAlpha: 1,
+            ease: 'none',
+            delay: 1,  
         })
     }
 
@@ -31,19 +61,20 @@ const Navbar = () => {
             className="lg:hidden absolute w-[100%] bg-[rgb(37,37,64)] h-[100vh] left-[50%] translate-x-[50%] z-10 overflow-hidden"
             >
                 <div className="w-full flex justify-end">
-                    <i 
-                    className="fa-solid fa-xmark mt-8 mr-8 text-2xl cursor-pointer"
+                    <i
+                    ref={barRef} 
+                    className="fa-solid fa-xmark mt-8 mr-8 text-2xl cursor-pointer opacity-0"
                     onClick={closeCollapseBar}
                     ></i>
                 </div>
 
-                <div className="w-full mt-20 text-[1.5rem]">
+                <div ref={NavMobileRef} className="w-full mt-20 text-[1.5rem] opacity-0">
                     
                     <ul className="text-center font-normal">
-                        <li className="pt-6"> Products </li>
-                        <li className="pt-6"> Features </li>
-                        <li className="pt-6"> About </li>
-                        <li className="pt-6"> Contact </li>
+                        <li className="pt-6 cursor-pointer"> Products </li>
+                        <li className="pt-6 cursor-pointer"> Features </li>
+                        <li className="pt-6 cursor-pointer"> About </li>
+                        <li className="pt-6 cursor-pointer"> Contact </li>
                     </ul>
 
                     <div className="mt-8 text-center">
@@ -57,7 +88,7 @@ const Navbar = () => {
                 </div>
 
             </section>
-            <section className="flex justify-between py-4 sm:py-6 lg:py-10">
+            <section ref={NavRef} className="flex justify-between py-4 sm:py-6 lg:py-10 opacity-0">
                 
                 <Link href={'/'}>
                     <a className="flex ml-3 lg:ml-16 xl:ml-24">
@@ -74,10 +105,10 @@ const Navbar = () => {
 
                 <div className="hidden lg:flex text-[1rem] lg:mr-16 xl:mr-24">
                     <ul className="flex font-normal lg:mr-4">
-                        <li className="px-4 py-3"> Products </li>
-                        <li className="px-4 py-3"> Features </li>
-                        <li className="px-4 py-3"> About </li>
-                        <li className="px-4 py-3"> Contact </li>
+                        <li  className="px-4 py-3 cursor-pointer"> Products </li>
+                        <li className="px-4 py-3 cursor-pointer"> Features </li>
+                        <li className="px-4 py-3 cursor-pointer"> About </li>
+                        <li className="px-4 py-3 cursor-pointer"> Contact </li>
                     </ul>
 
                     <div>

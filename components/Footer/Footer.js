@@ -18,7 +18,7 @@ const Footer = () => {
             <section className="grid grid-cols-1 lg:grid-cols-4 gap-1 lg:pr-4">
 
                 <Link href={'/'}>
-                    <a className="flex mx-auto lg:mx-0 xl:pl-24 xl:pr-16  text-white">
+                    <a className="flex mx-auto lg:mx-0 xl:pl-24 xl:pr-16  text-white h-fit">
                         <div className="h-fit">
                             <Image src={Logo} width={40} height={40} />
                         </div>
@@ -29,22 +29,22 @@ const Footer = () => {
                 <section className="text-center mt-6 md:mt-10 lg:mt-0">
                     <h4 className="text-xl font-medium text-white" > Quick Link </h4>
                     <ul className="font-normal text-base pt-3 text-[#F2F2F2]">
-                        <li className=""> Home </li>
-                        <li className="pt-3"> Products </li>
-                        <li className="pt-3"> About </li>
-                        <li className="pt-3"> Features </li>
-                        <li className="pt-3"> Contact </li>
+                        <li className="cursor-pointer"> Home </li>
+                        <li className="pt-3 cursor-pointer"> Products </li>
+                        <li className="pt-3 cursor-pointer"> About </li>
+                        <li className="pt-3 cursor-pointer"> Features </li>
+                        <li className="pt-3 cursor-pointer"> Contact </li>
                     </ul>
                 </section>
 
                 <section className="text-center mt-6 md:mt-10 lg:mt-0">
                     <h4 className="text-xl font-medium text-white" > Resources </h4>
                     <ul className="font-normal text-base pt-3 text-[#F2F2F2]">
-                        <li className=""> Download Whitepaper </li>
-                        <li className="pt-3"> Smart Token </li>
-                        <li className="pt-3"> Blockchain Explorer </li>
-                        <li className="pt-3"> Crypto API </li>
-                        <li className="pt-3"> Interest </li>
+                        <li className="cursor-pointer"> Download Whitepaper </li>
+                        <li className="pt-3 cursor-pointer"> Smart Token </li>
+                        <li className="pt-3 cursor-pointer"> Blockchain Explorer </li>
+                        <li className="pt-3 cursor-pointer"> Crypto API </li>
+                        <li className="pt-3 cursor-pointer"> Interest </li>
                     </ul>
                 </section>
 

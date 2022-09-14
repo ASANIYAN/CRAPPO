@@ -5,3 +5,17 @@
     }
     
 }
+
+.hero {
+    background-image: url("../public/hero-bg.png");
+    object-position: center;
+    object-fit: contain;
+}
+
+.newsletter {
+    background-image: url("../public/newsletter-bg.png");
+}
+
+.newsletterBox {
+    background-image: url("../public/box.png");
+}
