@@ -5,8 +5,8 @@ import ArrowRight from "/public/ArrowRight.svg";
 import ArrowRightCoin from "/public/ArrowRight_coin.svg";
 import HeroImg from "/public/hero.svg";
 import IconData from "/public/icon_data.svg";
-import IconEarth from "/public/earth.png";
-import IconPerson from "/public/profile.png";
+import IconEarth from "/public/earth.svg";
+import IconPerson from "/public/profile.svg";
 import Why from "/public/Why.svg";
 import Bitcoin from "/public/logo_bitcoin.svg";
 import Ethereum from "/public/Ethereum.svg";
@@ -297,7 +297,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <section className={` ${styles.hero}`}>
+      <section className={`bg-hero`}>
         
         <section 
         className=' text-white pt-6 lg:pt-10 ml-3 sm:ml-32 lg:ml-16 xl:ml-24 lg:grid lg:grid-cols-2 lg:gap-4'
@@ -336,7 +336,7 @@ export default function Home() {
 
           <section ref={heroRight} className='mt-6 lg:-mt-16 sm:mr-10  md:mr-16 lg:mr-10 xl:mr-20 translate-x-[9999px]'>
             <div className="">
-              <Image src={HeroImg} width={800} height={800} alt="hero" />
+              <Image src={HeroImg} width={700} height={700} alt="hero" />
             </div>
           </section>
 
@@ -348,7 +348,7 @@ export default function Home() {
 
         <section ref={figuresRef} className='text-white grid grid-cols-1 pt-24 lg:grid-cols-3 lg:gap-20 w-fit mx-auto lg:w-full'>
 
-          <section className="flex mx-auto lg:mx-0">
+          <section className="flex ml-12 lg:mx-0">
             <div>
               <Image src={IconData} width={70} height={70}  alt="icon-data"/>
             </div>
@@ -364,7 +364,7 @@ export default function Home() {
           </section>
 
           <section className="flex mt-4 md:mt-8 lg:mt-0 mx-auto lg:mx-0">
-            <div className='-ml-6 lg:ml-0'>
+            <div className='ml-6 lg:ml-0'>
               <Image src={IconPerson} width={70} height={70} alt="icon-person" />
             </div>
             
@@ -379,7 +379,7 @@ export default function Home() {
           </section>
 
           <section className="flex mt-4 md:mt-8 lg:mt-0 mx-auto lg:mx-0">
-            <div className='-ml-10 lg:ml-0'>
+            <div className='ml-4 lg:ml-0'>
               <Image src={IconEarth} width={70} height={70} alt="icon-earth" />
             </div>
             
@@ -426,12 +426,12 @@ export default function Home() {
 
       <section className="bg-hero">
         
-        <section ref={earn} className='pb-96 md:pb-72 lg:pb-60'>
+        <section ref={earn} className='pb-96 md:pb-72 lg:pb-60 pt-10'>
           <h2 className='text-center text-white font-bold text-4xl lg:text-[40px]'>
             Check how much you can earn
           </h2>
           
-          <p className="text-center font-normal text-[#E0E0E0] pt-3 max-w-[500px] mx-auto px-3 sm:px-2 md:px-0">
+          <p className="text-center font-normal text-[#E0E0E0] pt-3 max-w-[500px] pb-20 mx-auto px-3 sm:px-2 md:px-0">
             Let us check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.
           </p>
         

@@ -35,8 +35,8 @@ const Navbar = () => {
         nav_mobile_tl
         .to(collapseBarRef.current, {
             duration: 1,
-            ease: "power1",
-            x: '-50%',
+            ease: "power4",
+            x: '0',
         })
         .to(NavMobileRef.current, {
             // duration: 2,
@@ -48,9 +48,10 @@ const Navbar = () => {
 
     function closeCollapseBar() {
         gsap.to(collapseBarRef.current, {
-            duration: 1,
-            ease: "power2",
-            x: '50%',
+            duration: 2,
+            ease: "power4",
+            x: '9999px',
+
         })
     }
 
@@ -58,7 +59,7 @@ const Navbar = () => {
         <nav className="w-full bg-hero text-white">
             <section 
             ref={collapseBarRef} 
-            className="lg:hidden absolute w-[100%] bg-[rgb(37,37,64)] h-[100vh] left-[50%] translate-x-[50%] z-10 overflow-hidden"
+            className="lg:hidden fixed w-[100%] bg-[rgb(37,37,64)] mobile h-[100vh] z-10 translate-x-[9999px]"
             >
                 <div className="w-full flex justify-end">
                     <i
