@@ -47,7 +47,7 @@ const CoinCard = ({ name, alias, content, image }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className={ hover ? "bg-[#2B076E] rounded-[16px] max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto" 
-      : "bg-transparent max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto translate-x-[100vw]" }
+      : "bg-transparent max-w-[340px] mt-12 md:mt-0 pb-10 pt-5 text-center cursor-pointer mx-auto md:translate-x-[100vw]" }
       >
         
         <div className="pt-6 mx-auto w-fit">
@@ -120,7 +120,6 @@ export default function Home() {
   
 
   useEffect(() => {
-    
     gsap.to(heroLeft.current, { 
       x: '0', 
       ease: 'circ', 
@@ -302,7 +301,7 @@ export default function Home() {
         <section 
         className=' text-white pt-6 lg:pt-10 ml-3 sm:ml-32 lg:ml-16 xl:ml-24 lg:grid lg:grid-cols-2 lg:gap-4'
         >
-          <section ref={heroLeft} className='-translate-x-[100vw]'>
+          <section ref={heroLeft} className='-md:translate-x-[100vw]'>
             
             <section 
             className={`${styles.save} w-[19.75rem] sm:w-[22.6rem] rounded-[32px]`}
@@ -334,7 +333,7 @@ export default function Home() {
 
           </section>
 
-          <section ref={heroRight} className='mt-6 lg:-mt-16 sm:mr-10  md:mr-16 lg:mr-10 xl:mr-20 translate-x-[100vw]'>
+          <section ref={heroRight} className='mt-6 lg:-mt-16 sm:mr-10  md:mr-16 lg:mr-10 xl:mr-20 md:translate-x-[100vw]'>
             <div className="">
               <Image src={HeroImg} width={700} height={700} alt="hero" />
             </div>
@@ -401,11 +400,11 @@ export default function Home() {
         
         <section className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 pt-6 lg:pt-10 ml-3 sm:ml-32 lg:ml-16 xl:ml-24'>
           
-          <div ref={whyLeft} className='mt-6 sm:mr-10 md:mr-16 lg:mr-0 sm:-mt-28 lg:mt-0 order-last lg:order-first first translate-x-[100vw]'>
+          <div ref={whyLeft} className='mt-6 sm:mr-10 md:mr-16 lg:mr-0 sm:-mt-28 lg:mt-0 order-last lg:order-first first md:translate-x-[100vw]'>
             <Image src={Why} width={700} height={700} alt="why" />
           </div>
 
-          <section ref={whyRight} className="pt-20 lg:text-left lg:pt-44 lg:mr-2 xl:mr-16 -translate-x-[100vw]">
+          <section ref={whyRight} className="pt-20 lg:text-left lg:pt-44 lg:mr-2 xl:mr-16 -md:translate-x-[100vw]">
             
             <h2 className="font-bold text-4xl lg:text-[40px]">
               Why you should choose CRAPPO
@@ -499,7 +498,7 @@ export default function Home() {
         
         <h2 ref={trade} 
         className='text-[#0D0D2B] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-center mx-auto 
-        max-w-[750px] -translate-x-[100vw]'>
+        max-w-[750px] -md:translate-x-[100vw]'>
           Trade securely and market the high growth cryptocurrencies.
         </h2>
 
@@ -540,14 +539,14 @@ export default function Home() {
           </section>
 
           <section>
-              <div ref={bitcoinChart} className="translate-x-[100vw]">
+              <div ref={bitcoinChart} className="md:translate-x-[100vw]">
                 <Image src={Chart} width={500} height={500} alt="bitcoin-chart" />
               </div>
           </section>
 
         </section> 
 
-        <section ref={statistics} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-0 mt-10 translate-x-[100vw]'>
+        <section ref={statistics} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-0 mt-10 md:translate-x-[100vw]'>
 
           <section className='order-last lg:order-first'>
             <div>
@@ -575,7 +574,7 @@ export default function Home() {
         </section>
 
         
-        <section ref={grow} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16 -translate-x-[100vw]'>
+        <section ref={grow} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10 sm:ml-32 lg:ml-16 xl:ml-24 mt-16 -md:translate-x-[100vw]'>
 
           <section className="lg:mt-24">
             
