@@ -31,7 +31,7 @@ const CoinCard = ({ name, alias, content, image }) => {
     gsap.to(list.current, { 
       x: '0', 
       ease: 'power3', 
-      duration: 1, 
+      duration: 0.5, 
       delay:1,
       scrollTrigger: {
         trigger: list.current,
@@ -123,7 +123,7 @@ export default function Home() {
     gsap.to(heroLeft.current, { 
       x: '0', 
       ease: 'circ', 
-      duration:2, 
+      duration:1, 
       delay:1,
       scrollTrigger: {
         trigger: heroLeft.current,
@@ -133,7 +133,7 @@ export default function Home() {
     gsap.to(heroRight.current, { 
       x: '0', 
       ease: 'circ', 
-      duration:2, 
+      duration:1, 
       delay:1,
       scrollTrigger: {
         trigger: heroRight.current,
@@ -146,7 +146,7 @@ export default function Home() {
       opacity: 0,
       scale: 0,
     }, {
-      duration: 2,
+      duration: 1,
       opacity: 1,
       scale: 1,
       scrollTrigger: figuresRef.current,
@@ -158,7 +158,7 @@ export default function Home() {
       opacity: 0,
       scale: 0,
     }, {
-      duration: 2,
+      duration: 1,
       opacity: 1,
       scale: 1,
       scrollTrigger: rate.current,
@@ -175,7 +175,7 @@ export default function Home() {
     gsap.to(whyLeft.current, { 
       x: '0', 
       ease: 'power4', 
-      duration: 2, 
+      duration: 1, 
       delay:1,
       scrollTrigger: {
         trigger: whyLeft.current,
@@ -186,7 +186,7 @@ export default function Home() {
     gsap.to(whyRight.current, { 
       x: '0', 
       ease: 'power4', 
-      duration: 2, 
+      duration: 1, 
       delay:1,
       scrollTrigger: {
         trigger: whyRight.current,
@@ -200,7 +200,7 @@ export default function Home() {
       opacity: 0,
       scale: 0,
     }, {
-      duration: 2,
+      duration: 1,
       opacity: 1,
       scale: 1,
       scrollTrigger: {
@@ -213,7 +213,7 @@ export default function Home() {
     gsap.to(trade.current, { 
       x: '0', 
       ease: 'power3', 
-      duration: 1.5, 
+      duration: 1, 
       delay:1,
       scrollTrigger: {
         trigger: trade.current,
@@ -227,7 +227,7 @@ export default function Home() {
       opacity: 0,
       scale: 0,
     }, {
-      duration: 2,
+      duration: 1,
       opacity: 1,
       scale: 1,
       scrollTrigger: market.current,
@@ -239,7 +239,7 @@ export default function Home() {
       opacity: 0,
       scale: 0,
     }, {
-      duration: 2,
+      duration: 1,
       opacity: 1,
       scale: 1,
       scrollTrigger: invest.current,
@@ -262,7 +262,7 @@ export default function Home() {
     gsap.to(statistics.current, { 
       x: '0', 
       ease: 'power4', 
-      duration:2, 
+      duration:1, 
       delay:1,
       scrollTrigger: {
         trigger: statistics.current,
@@ -274,7 +274,7 @@ export default function Home() {
     gsap.to(grow.current, { 
       x: '0', 
       ease: 'power4', 
-      duration:2, 
+      duration:1, 
       delay:1,
       scrollTrigger: {
         trigger: grow.current,
@@ -287,7 +287,7 @@ export default function Home() {
       opacity: 0,
       scale: 0,
     }, {
-      duration: 2,
+      duration: 1,
       opacity: 1,
       scale: 1,
       scrollTrigger: mining.current,
